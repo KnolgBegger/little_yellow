@@ -1,7 +1,7 @@
 <launch>
 <include file="$(find launch_file)/launch/hokuyo.launch"/>
 <include file="$(find launch_file)/launch/joy.launch"/>
-
+<include file="$(find imu_vn_100)/launch/vn_100_cont.launch"/>
 
 <node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen"/>
 </launch>

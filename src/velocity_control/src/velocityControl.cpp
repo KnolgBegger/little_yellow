@@ -24,8 +24,8 @@ void enconderCallback(const std_msgs::Int16MultiArray::ConstPtr& enconder)
 {
   //enconder_left = enconder->data[1];
   //enconder_right = enconder->data[2];
-  velocity_left = (enconder->data[1])*0.87222;
-  //velocity_left =enconder_left*0.87222;
+  velocity_left = (enconder->data[0])*0.87222;
+
   velocity_right = (enconder->data[1])*0.87222;
   ROS_INFO("velocity_left=%f,velocity_right=%f",velocity_left,velocity_right);
 }

@@ -1,8 +1,7 @@
 <launch>
-<!-- joy node -->
-<node respawn="true" pkg="joy" type="joy_node" name="turtle_joy">
-<param name="dev" type="string" value="/dev/input/js0"/>
-<param name= "deadzone" value = "0.12"/>
-</node>
+<include file="$(find launch_file)/launch/hokuyo.launch"/>
+<include file="$(find launch_file)/launch/joy.launch"/>
+<include file="$(find imu_vn_100)/launch/vn_100_cont.launch"/>
 
+<node name="rviz" pkg="rviz" type="rviz" respawn="false" output="screen"/>
 </launch>
